@@ -1,1 +1,1 @@
-web: gunicorn deply.wsgi
+web: gunicorn wsgi:deply
