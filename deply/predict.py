@@ -8,7 +8,7 @@ from keras.preprocessing.image import img_to_array, load_img
 
 
 #Load_model
-Plas_spec = load_model('model_inception.h5')
+Plas_spec = load_model('deply/model_inception.h5')
 graph = ops.reset_default_graph()
 Plas_spec.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 

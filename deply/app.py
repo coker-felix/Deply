@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from model import model_predict
+from .predict import model_predict
 from flask import render_template
 
 app = Flask(__name__)
