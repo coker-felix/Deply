@@ -8,7 +8,7 @@ from keras.preprocessing.image import img_to_array, load_img
 
 
 #Load_model
-Plas_spec = load_model('deply/model_inception.h5')
+Plas_spec = load_model('deply/model_inception.h5', compile=False)
 graph = ops.reset_default_graph()
 Plas_spec.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
@@ -30,8 +30,8 @@ def model_predict(img_path):
     a = (preds[0])
     total = sum(sum(preds))
     result = 'Falciparum: {} - Malariae:  {} - Ovale: {} -Vivax: {}'.format(round(a[0]/total), round(a[1]/total), round(a[2]/total), round(a[3]/total))
-    msg = 'Thank you, But do confirm from a pathologist..'
-    return result + msg
+
+    return result 
     # return 'Falciparum: ',round(a[0]/total),'\n Malariae: ' , round(a[1]/total), '\n Ovale: ',round(a[2]/total), '\n Vivax: ',round(a[3]/total)
 
 

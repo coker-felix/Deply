@@ -16,7 +16,7 @@ background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);">
 
 
 
-<form method="post" action="{{ url_for('predict')}}" enctype=multipart/form-data>
+<form method="post" action="{{ url_for('predict')}}" enctype= "multipart/form-data">
 <div class="frame">
 	<div class="center">
 		<div class="title">
@@ -24,7 +24,7 @@ background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);">
 		</div> 
 		<div class="dropzone">
 			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-			<input type="file" class="upload-input" name="upload" required="required"  />
+			<input type="file" class="upload-input" name="file" required="required"  />
 		</div>
 		<button type="Submit" class="btn" name="uploadbutton" >Submit</button>
         <div id="pop"></div>
@@ -33,22 +33,8 @@ background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);">
 <form>
 
 
-{% comment %} <div class="frame">
-	<div class="center">
-		<div class="title">
-			<h1>Drop file to upload</h1>
-		</div>
-		<div class="dropzone">
-			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-			<input type="file" class="upload-input" name="upload" />
-		</div>
-		<button type="button" class="btn" name="uploadbutton" onclick="display()">Submit</button>
-		<br>
-		<button type="button" class="btn" name="predict" onclick="display()">Predict</button>
-        <div id="pop"></div>
-	</div>
-</div> {% endcomment %}
-<!-- NO JS ADDED YET -->
+
+
 
 
 
