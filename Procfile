@@ -1,1 +1,1 @@
-web: gunicorn wsgi:deply
+web: gunicorn wsgi:app

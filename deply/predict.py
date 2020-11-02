@@ -9,7 +9,7 @@ from flask import Flask, redirect, url_for, request, render_template
 
 
 #Load_model
-Plas_spec = load_model('deply/model_inception.h5', compile=False)
+Plas_spec = load_model('deply/model_VGG_16_1.h5', compile=False)
 graph = ops.reset_default_graph()
 Plas_spec.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
