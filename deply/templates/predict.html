@@ -1,38 +1,130 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Plas-AI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Plas - Ai</title>
+  <!-- MDB icon -->
+  <!-- MDB icon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/Ted.gif') }}" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='mdb.min.css') }}">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
-<div style="; text-align: left; padding-left: 20px; padding: 10px">
-<img src="{{ url_for('static', filename='Ted.gif') }}" height="50px" width="50px" style="border-radius: 50px; background-color: #8BC6EC;
-background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);" >
-</div>
-<body style="background-color: #8BC6EC;background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+<body>
 
 <style>
-.predict {
-	color: black;
-    font-size: 25px;
-    text-align: center;
-    margin: auto;
+.view {
+    background: url({{ url_for('static', filename='img/cool-background.png') }}) no-repeat center center;
+    background-size: cover;
 }
 </style>
 
 
+  <!-- Start your project here-->  
+<html lang="en" class="full-height">
 
-<div class='predict'>
-	<p><b> {{ prediction_text }} </b></p>
-	<p><b> Thank you, But do confirm from a pathologist.. </b></p>
-</div>
+<!--Main Navigation-->
+<header>
 
+  <nav class="navbar navbar-expand-lg navbar-dark black">
+    <div class="container">
+      <a class="navbar-brand" href="#"><strong>Plas - Ai</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('hello_world')}}">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-
-
+  <div class="view intro-2">
+    <div class="full-bg-img">
+      <div class="mask rgba-black-slight flex-center">
+        <div class="container">
+          <div class="white-text text-center wow fadeInUp">
+            <h2>Prediction Result</h2>
+            <h5><p><b> {{ prediction_text }} </b></p></h5>
+			
+			 <p><b> Thank you, But do confirm from a pathologist.. </b></p>
+            <br>
 <button type="Submit" class="btn"><a href="{{ url_for('hello_world')}}" style="text-decoration: none; color: white;"> Run Another One</a></button>
-<script src="{{ url_for('static', filename='dropzone.js')}}"></script>
+          </div>
+        </div>
+		
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!--Main Navigation-->
+<br>
+
+<!--Main Layout-->
+<main class="text-center my-5">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <p align="justify">Plas-AI, is an AI-driven web app developed by Felix Coker, Salami Redeemer and Emmanuel A. Asiamah (Faculty Member of the University of Health and Allied Sciences, Ghana) is an easy to use Plasmodium speciation software for Malaria parasite Images.</p>
+                <br>
+        <p>NOTE: This app is solely designed as an entry to GADS2020 project phase and hence not licensed to be used in clinical settings. We strongly advise it's used under medical supervision.</p>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+<!--Main Layout-->
+
+        <!--Main Layout-->
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Plas-AI:
+    <a href="#">Version 1.0.0 </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->       
+
+    </body>
+
+
+
+<!-- End your project here-->
+
+
+
+ <!-- jQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    // Animations init
+new WOW().init();
+  </script>
+
 </body>
 </html>

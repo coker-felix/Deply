@@ -1,43 +1,174 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Plas-AI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Plas - Ai</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/Ted.gif') }}" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='mdb.min.css') }}">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
-<div style="; text-align: left; padding-left: 20px; padding: 10px">
-	<img src="{{ url_for('static', filename='Ted.gif') }}" height="50px" width="50px" style="border-radius: 50px; background-color: #8BC6EC;
-background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);" >
-</div>
-<body style="background-color: #8BC6EC;
-background-image: linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);">
-
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-
-
-
-<form method="post" action="{{ url_for('predict')}}" enctype= "multipart/form-data">
-<div class="frame">
-	<div class="center">
-		<div class="title">
-			<h1>Drop file to upload</h1>
-		</div> 
-		<div class="dropzone">
-			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-			<input type="file" class="upload-input" name="file" required="required"  />
-		</div>
-		<button type="Submit" class="btn" name="uploadbutton" >Submit</button>
-        <div id="pop"></div>
-	</div>
-</div>
-<form>
+<body>
 
 
 
 
+  <!-- Start your project here-->  
+
+  
+
+<body>
+
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <strong>Plas - Ai</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <!--<a class="nav-link" href="#">Link</a>-->
+                  </li>
+                  <li class="nav-item">
+                    <!--<a class="nav-link" href="#">Profile</a>-->
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div class="view" style="background:url({{ url_for('static', filename='img/cool-background.png') }}); /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background-image: {{ url_for('static', filename='img/cool-background.svg') }};
+ background-repeat: no-repeat; background-size: cover; background-position: center center;
+ "
+          >
+            <!-- Mask & flexbox options-->
+            <div class=" align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <br>
+                <br>
+                <br>
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Make purchases with our app </h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4">We’re on a mission to perfect Malaria diagnosis with AI powered software that changes the way the world practices parasitology. 
+					This SaaS  helps distinguish between four plasmodium species namely Falciparum, Malariae, Ovale and Vivax.</h6>
+             
+			  <form class="md-form" method="post" action="{{ url_for('predict')}}" enctype= "multipart/form-data">
+                <div class="file-field">
+                  <a class="btn-floating purple-gradient mt-0 float-left">
+                    <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                    <input type="file" accept=".jpg, .png, " name="file"  required="required">
+                  </a>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload your slide image">
+                  </div>
+                </div>
+				<button type="Submit" class="btn btn-white" >Submit</button>
+				<!--<a class="btn btn-white">Submit</a> -->
+              </form>                    
+                   
+                    <!-- <a href="predict.html" class="btn btn-outline-white" input>Predict</a> -->
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  <br>
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                   <img src="{{ url_for('static', filename='img/ai-n.jpg') }}" style="border-radius: 5px; opacity: 0.7" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <main>
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-5">
+              <!--Grid column-->
+              <div class="col-md-12 text-center">
+                <p>Malaria kills over 1,100 people yearly. Therefore, accurate laboratory diagnosis is essential, particularly to detect infections with the potentially fatal Plasmodium falciparum. The primary method of diagnosis of malaria in most clinical laboratories is still by the microscopic examination of thick and thin blood films. This requires the laboratorians to visually inspect the slides and based on their observation identify the specie of the parasite present. A growing demand for technologies that reduce the burden on laboratorians and support speedy decision-making has being realised.</p>
+
+                <p>Plas-AI, an AI-driven web app developed by Felix Coker, Salami Redeemer and Emmanuel A. Asiamah (Faculty Member of the University of Health and Allied Sciences, Ghana) is an easy to use Plasmodium speciation software for Malaria parasite Images.</p>
+                <br>
+                <p>NOTE: This app is solely designed as an entry to GADS2020 project phase and hence not licensed to be used in clinical settings. We strongly advise it's used under medical supervision.</p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </main>
+        <!--Main Layout-->
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Plas-AI:
+    <a href="#">Version 1.0.0 </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->       
+
+    </body>
 
 
 
-<script src="{{ url_for('static', filename='dropzone.js')}}"></script>
+<!-- End your project here-->
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js')}}"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    // Animations init
+new WOW().init();
+  </script>
+
 </body>
 </html>
